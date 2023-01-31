@@ -53,7 +53,7 @@ cmp.setup {
   },
   mapping = {
     ["<C-k>"] = cmp.mapping.select_prev_item(),
-		["<C-j>"] = cmp.mapping.select_next_item(),
+	["<C-j>"] = cmp.mapping.select_next_item(),
     ["<C-b>"] = cmp.mapping(cmp.mapping.scroll_docs(-1), { "i", "c" }),
     ["<C-f>"] = cmp.mapping(cmp.mapping.scroll_docs(1), { "i", "c" }),
     ["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
@@ -105,6 +105,8 @@ cmp.setup {
         nvim_lsp = "[LSP]",
         luasnip = "[Snippet]",
         buffer = "[Buffer]",
+        cmp_tabnine="[tabnine]",
+        vscode_es7_javascript_react_snippets= "[es7_js_react_snippets]",
         path = "[Path]",
       })[entry.source.name]
       return vim_item
@@ -115,6 +117,8 @@ cmp.setup {
     { name = "luasnip" },
     { name = "buffer" },
     { name = "path" },
+    {name = "cmp_tabnine"},
+    {name = "vscode_es7_javascript_react_snippets"},
   },
   confirm_opts = {
     behavior = cmp.ConfirmBehavior.Replace,
