@@ -1,7 +1,7 @@
 vim.g.db_ui_use_nerd_fonts = 1
 vim.g.db_ui_show_database_icon = 1
 vim.g.db_ui_force_echo_notifications = 1
-vim.g.db_ui_win_position = 'right'
+vim.g.db_ui_win_position = 'left'
 vim.g.db_ui_winwidth = 80
 
 vim.g.db_ui_table_helpers = {
@@ -42,7 +42,7 @@ vim.g.db_ui_icons = {
     connection_error = '✕',
 }
 -- opening it in a new tab
-vim.keymap.set('n', '<leader><leader>cd', ':tab DBUI<cr>', {})
+--vim.keymap.set('n', '<leader><leader>k', ':tab DBUI<cr>', {})
 
 -- just close the tab, but context related of the keybinding
-vim.keymap.set('n', '<leader><leader>tq', ':tabclose<cr>')
+--vim.keymap.set('n', '<leader><leader>tq', ':tabclose<cr>')

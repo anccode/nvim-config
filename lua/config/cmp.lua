@@ -106,8 +106,8 @@ cmp.setup {
         luasnip = "[Snippet]",
         buffer = "[Buffer]",
         cmp_tabnine="[tabnine]",
-        vscode_es7_javascript_react_snippets= "[es7_js_react_snippets]",
         path = "[Path]",
+        vscode_es7_javascript_react_snippets = "[es7-javascript-react-snippets]",
       })[entry.source.name]
       return vim_item
     end,
@@ -116,9 +116,9 @@ cmp.setup {
     { name = "nvim_lsp" },
     { name = "luasnip" },
     { name = "buffer" },
-    { name = "path" },
     {name = "cmp_tabnine"},
-    {name = "vscode_es7_javascript_react_snippets"},
+    {name = "path" },
+    {name = "vscode_es7_javascript_react_snippets" },
   },
   confirm_opts = {
     behavior = cmp.ConfirmBehavior.Replace,

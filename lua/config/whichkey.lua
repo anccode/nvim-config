@@ -88,6 +88,7 @@ local mappings = {
   ["w"] = { "<cmd>w!<CR>", "Save" },
   ["q"] = { "<cmd>q!<CR>", "Quit" },
   ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
+  ["d"] = { "<cmd>tab DBUI<CR>", "Base de datos" },
   ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
   ["f"] = {
     "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
@@ -127,7 +128,11 @@ local mappings = {
       "Diff",
     },
   },
-
+  --[[ r = { ]]
+  --[[   "REST", ]]
+  --[[   c = {"<cmd>rest.http<cr>", "create archive"}, ]]
+  --[[   r = {"<cmd>rn<cr>", "request runing"} ]]
+  --[[ }, ]]
   l = {
     name = "LSP",
     a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
@@ -139,7 +144,7 @@ local mappings = {
       "<cmd>Telescope lsp_workspace_diagnostics<cr>",
       "Workspace Diagnostics",
     },
-    f = { "<cmd>lua vim.lsp.buf.format{async=true}<cr>", "Format" },
+    f = { "<cmd>lua vim.lsp.buf.formatting_sync()<cr>", "Format" },
     i = { "<cmd>LspInfo<cr>", "Info" },
     I = { "<cmd>LspInstallInfo<cr>", "Installer Info" },
     j = {

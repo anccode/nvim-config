@@ -254,6 +254,11 @@ _G.packer_plugins = {
     path = "/home/angel/.local/share/nvim/site/pack/packer/start/rest.nvim",
     url = "https://github.com/rest-nvim/rest.nvim"
   },
+  ["tabnine-nvim"] = {
+    loaded = true,
+    path = "/home/angel/.local/share/nvim/site/pack/packer/start/tabnine-nvim",
+    url = "https://github.com/codota/tabnine-nvim"
+  },
   ["telescope-media-files.nvim"] = {
     loaded = true,
     path = "/home/angel/.local/share/nvim/site/pack/packer/start/telescope-media-files.nvim",
@@ -300,11 +305,6 @@ _G.packer_plugins = {
     only_cond = false,
     path = "/home/angel/.local/share/nvim/site/pack/packer/opt/vim-prettier",
     url = "https://github.com/prettier/vim-prettier"
-  },
-  ["vscode-es7-javascript-react-snippets"] = {
-    loaded = true,
-    path = "/home/angel/.local/share/nvim/site/pack/packer/start/vscode-es7-javascript-react-snippets",
-    url = "https://github.com/dsznajder/vscode-es7-javascript-react-snippets"
   },
   ["which-key.nvim"] = {
     loaded = true,
