@@ -105,7 +105,12 @@ local mappings = {
     S = { "<cmd>PackerStatus<cr>", "Status" },
     u = { "<cmd>PackerUpdate<cr>", "Update" },
   },
-
+  r = {
+    name = "rest",
+    r = { "<cmd>lua require('rest-nvim').run()<cr>", "compile" },
+    l = { "<cmd>lua require('rest-nvim').last()<cr>", "last compile" },
+    c = { "<cmd>new hola.http<cr>", "create archive" },
+  },
   g = {
     name = "Git",
     g = { "<cmd>lua _LAZYGIT_TOGGLE()<CR>", "Lazygit" },
@@ -128,11 +133,6 @@ local mappings = {
       "Diff",
     },
   },
-  --[[ r = { ]]
-  --[[   "REST", ]]
-  --[[   c = {"<cmd>rest.http<cr>", "create archive"}, ]]
-  --[[   r = {"<cmd>rn<cr>", "request runing"} ]]
-  --[[ }, ]]
   l = {
     name = "LSP",
     a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },

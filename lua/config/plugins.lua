@@ -72,6 +72,7 @@ return packer.startup(function(use)
     }
   }
   -- rest client
+  -- install in your computer curl, jq , tiny
   use({
     "rest-nvim/rest.nvim",
     requires = { "nvim-lua/plenary.nvim" },
