@@ -23,16 +23,17 @@ keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
+--movilizarnos entre carpetas
+--bufferline
 --split vertical
-keymap("n", "<S-l>", ":vnew <cr>", opts)
-keymap("n", "<S-j>", ":new <cr>", opts)
+keymap("n", "<S-j>", ":vnew <cr>", opts)
 --new windows
 keymap("n", "<S-n>", ":enew <cr>", opts)
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
 keymap("n", "<C-Down>", ":resize +2<CR>", opts)
-keymap("n", "<C-Left>", ":vertical resize +2<CR>", opts)
-keymap("n", "<C-Right>", ":vertical resize -2<CR>", opts)
+keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
+keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
 -- Navigate buffers
 keymap("n", "<S-l>", ":bnext<CR>", opts)
@@ -49,8 +50,8 @@ keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 
 -- Move text up and down
-keymap("v", "<A-j>", ":m .+1<CR>==", opts)
-keymap("v", "<A-k>", ":m .-2<CR>==", opts)
+keymap("v", "<A-j>", ":m .-1<CR>==", opts)
+keymap("v", "<A-k>", ":m .+2<CR>==", opts)
 --keymap("v", "p", '"_dP', opts)
 
 

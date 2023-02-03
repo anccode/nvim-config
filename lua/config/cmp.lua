@@ -107,7 +107,6 @@ cmp.setup {
         buffer = "[Buffer]",
         cmp_tabnine="[tabnine]",
         path = "[Path]",
-        vscode_es7_javascript_react_snippets = "[es7-javascript-react-snippets]",
       })[entry.source.name]
       return vim_item
     end,
@@ -118,7 +117,6 @@ cmp.setup {
     { name = "buffer" },
     {name = "cmp_tabnine"},
     {name = "path" },
-    {name = "vscode_es7_javascript_react_snippets" },
   },
   confirm_opts = {
     behavior = cmp.ConfirmBehavior.Replace,

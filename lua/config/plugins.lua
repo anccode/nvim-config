@@ -56,6 +56,8 @@ return packer.startup(function(use)
   --tabnine
   use {'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'}
   use { 'codota/tabnine-nvim', run = "./dl_binaries.sh" }
+  --better-comments
+  use "Djancyp/better-comments.nvim"
   --cmp
   use "hrsh7th/nvim-cmp" --plugin de autocompletado
   use "hrsh7th/cmp-buffer" --buffer autocompletado
@@ -71,6 +73,10 @@ return packer.startup(function(use)
       "tpope/vim-dotenv"
     }
   }
+  -- vscode-es7-javascript-react-snippets
+  use {'dsznajder/vscode-es7-javascript-react-snippets',
+    run = 'yarn install --frozen-lockfile && yarn compile'
+  }
   -- rest client
   -- install in your computer curl, jq , tiny
   use({
@@ -79,7 +85,6 @@ return packer.startup(function(use)
   })
   --lsp
   use "williamboman/nvim-lsp-installer"
-  --use "hrsh7th/cmp-nvim-lsp"
   use "neovim/nvim-lspconfig" -- enable LSP
   use "williamboman/mason.nvim" -- simple to use language server installer
   use "williamboman/mason-lspconfig.nvim" -- simple to use language server installer

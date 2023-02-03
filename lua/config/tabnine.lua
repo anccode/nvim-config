@@ -1,4 +1,8 @@
-local tabnine = require("tabnine")
+local ok, tabnine = pcall(require, "tabnine")
+
+if not ok then 
+   return
+  end
 
 tabnine.setup{
   disable_auto_comment=true,

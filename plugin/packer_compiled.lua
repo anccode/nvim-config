@@ -94,6 +94,11 @@ _G.packer_plugins = {
     path = "/home/angel/.local/share/nvim/site/pack/packer/start/alpha-nvim",
     url = "https://github.com/goolord/alpha-nvim"
   },
+  ["better-comments.nvim"] = {
+    loaded = true,
+    path = "/home/angel/.local/share/nvim/site/pack/packer/start/better-comments.nvim",
+    url = "https://github.com/Djancyp/better-comments.nvim"
+  },
   ["bufferline.nvim"] = {
     loaded = true,
     path = "/home/angel/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
@@ -306,6 +311,11 @@ _G.packer_plugins = {
     path = "/home/angel/.local/share/nvim/site/pack/packer/opt/vim-prettier",
     url = "https://github.com/prettier/vim-prettier"
   },
+  ["vscode-es7-javascript-react-snippets"] = {
+    loaded = true,
+    path = "/home/angel/.local/share/nvim/site/pack/packer/start/vscode-es7-javascript-react-snippets",
+    url = "https://github.com/dsznajder/vscode-es7-javascript-react-snippets"
+  },
   ["which-key.nvim"] = {
     loaded = true,
     path = "/home/angel/.local/share/nvim/site/pack/packer/start/which-key.nvim",
@@ -318,15 +328,15 @@ vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads
 time([[Defining lazy-load filetype autocommands]], true)
+vim.cmd [[au FileType markdown ++once lua require("packer.load")({'vim-prettier'}, { ft = "markdown" }, _G.packer_plugins)]]
+vim.cmd [[au FileType vue ++once lua require("packer.load")({'vim-prettier'}, { ft = "vue" }, _G.packer_plugins)]]
+vim.cmd [[au FileType html ++once lua require("packer.load")({'vim-prettier'}, { ft = "html" }, _G.packer_plugins)]]
 vim.cmd [[au FileType javascript ++once lua require("packer.load")({'vim-prettier'}, { ft = "javascript" }, _G.packer_plugins)]]
 vim.cmd [[au FileType typescript ++once lua require("packer.load")({'vim-prettier'}, { ft = "typescript" }, _G.packer_plugins)]]
 vim.cmd [[au FileType css ++once lua require("packer.load")({'vim-prettier'}, { ft = "css" }, _G.packer_plugins)]]
 vim.cmd [[au FileType less ++once lua require("packer.load")({'vim-prettier'}, { ft = "less" }, _G.packer_plugins)]]
 vim.cmd [[au FileType scss ++once lua require("packer.load")({'vim-prettier'}, { ft = "scss" }, _G.packer_plugins)]]
 vim.cmd [[au FileType graphql ++once lua require("packer.load")({'vim-prettier'}, { ft = "graphql" }, _G.packer_plugins)]]
-vim.cmd [[au FileType markdown ++once lua require("packer.load")({'vim-prettier'}, { ft = "markdown" }, _G.packer_plugins)]]
-vim.cmd [[au FileType vue ++once lua require("packer.load")({'vim-prettier'}, { ft = "vue" }, _G.packer_plugins)]]
-vim.cmd [[au FileType html ++once lua require("packer.load")({'vim-prettier'}, { ft = "html" }, _G.packer_plugins)]]
 time([[Defining lazy-load filetype autocommands]], false)
 vim.cmd("augroup END")
 vim.cmd [[augroup filetypedetect]]
