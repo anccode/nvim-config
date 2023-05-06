@@ -1,8 +1,7 @@
 local ok, rest_nvim = pcall(require, "rest-nvim")
 
-if not ok then 
-   return
-
+if not ok then
+  return
 end
 
 rest_nvim.setup({
@@ -13,7 +12,7 @@ rest_nvim.setup({
   -- skip ssl verification, useful for unknown certificates
   skip_ssl_verification = false,
   --highlight request run
-  highlight ={
+  highlight = {
     enabled = true,
     timeout = 150,
   },
@@ -26,9 +25,9 @@ rest_nvim.setup({
   formatters = {
     json = "jq",
     html = function(body)
-      return vim.fn.system({"tidy", "-i", "-q", "-"}, body)
+      return vim.fn.system({ "tidy", "-i", "-q", "-" }, body)
     end
-        },
+  },
   -- jump request line on run
   jump_to_request = false,
   env_file = ".env",
@@ -36,13 +35,12 @@ rest_nvim.setup({
   yank_dry_run = true,
 })
 
-vim.api.nvim_create_autocmd("FileType",{
-    pattern = "http",
-    callback = function ()
-        local buff = tonumber(vim.fn.expand("<abuf>"), 10)
-        vim.keymap.set("n", "<leader>rr", rest_nvim.run, {noremap = true, buffer = buff})
-        vim.keymap.set("n", "<leader>rl", rest_nvim.last, {noremap = true, buffer = buff})
-        vim.keymap.set("n", "<leader>rp", function () rest_nvim.run(true) end, {noremap = true, buffer = buff})
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "http",
+  callback = function()
+    local buff = tonumber(vim.fn.expand("<abuf>"), 10)
+    vim.keymap.set("n", "<leader>rr", rest_nvim.run, { noremap = true, buffer = buff })
+    vim.keymap.set("n", "<leader>rl", rest_nvim.last, { noremap = true, buffer = buff })
+    vim.keymap.set("n", "<leader>rp", function() rest_nvim.run(true) end, { noremap = true, buffer = buff })
   end
 })
-

@@ -73,10 +73,6 @@ return {
       },
     },
   },
-  {
-    "jupyter-vim/jupyter-vim",
-    requires = { { 'jupyter-vim/jupyter-nvim', run = ':UpdateRemotePlugins' } }
-  }
   --[[ --chat gpt ]]
   --[[ { ]]
   --[[ 	"jackMort/ChatGPT.nvim", ]]
