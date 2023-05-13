@@ -19,7 +19,7 @@ null_ls.setup({
 		--format lua
 		formatting.stylua,
         -- python 
-		formatting.tapf,
+		formatting.yapf,
 		diagnostics.flake8,
 	},
 })

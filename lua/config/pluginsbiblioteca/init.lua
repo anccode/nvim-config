@@ -73,17 +73,5 @@ return {
       },
     },
   },
-  --[[ --chat gpt ]]
-  --[[ { ]]
-  --[[ 	"jackMort/ChatGPT.nvim", ]]
-  --[[ 	event = "VeryLazy", ]]
-  --[[ 	config = function() ]]
-  --[[ 		require("config.angel.plugins.chatgpt") ]]
-  --[[ 	end, ]]
-  --[[ 	dependencies = { ]]
-  --[[ 		"MunifTanjim/nui.nvim", ]]
-  --[[ 		"nvim-lua/plenary.nvim", ]]
-  --[[ 		"nvim-telescope/telescope.nvim", ]]
-  --[[ 	}, ]]
-  --[[ }, ]]
+  {"szymonmaszke/vimpyter"},
 }
