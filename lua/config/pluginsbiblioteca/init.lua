@@ -73,5 +73,5 @@ return {
       },
     },
   },
-  {"szymonmaszke/vimpyter"},
+  {"jupyter-vim/jupyter-vim"}
 }
