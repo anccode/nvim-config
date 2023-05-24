@@ -42,7 +42,7 @@ nvim_tree.setup {
         },
       },
     },
-  },
+},
   diagnostics = {
     enable = true,
     show_on_dirs = true,
@@ -56,15 +56,14 @@ nvim_tree.setup {
   view = {
     width = 30,
     side = "left",
-    on_attach = function(bufnr)
-      local tree_cb = require 'nvim-tree.config'.nvim_tree_callback
-      vim.api.nvim_buf_set_keymap(bufnr, "n", "l", ":NvimTreeFindFile<CR>", { noremap = true })
-      vim.api.nvim_buf_set_keymap(bufnr, "n", "h", ":NvimTreeToggle<CR>", { noremap = true })
-      vim.api.nvim_buf_set_keymap(bufnr, "n", "<C-n>", ":NvimTreeToggle<CR>", { noremap = true })
-      vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>r", ":NvimTreeRefresh<CR>", { noremap = true })
-      vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>n", ":NvimTreeCreateDir<CR>", { noremap = true })
-      vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>f", ":NvimTreeFindFile<CR>", { noremap = true })
-      vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>d", ":NvimTreeDelete<CR>", { noremap = true })
-    end,
   },
 }
+
+local tree_cb = require 'nvim-tree.config'.nvim_tree_callback
+vim.api.nvim_set_keymap("n", "l", ":NvimTreeFindFile<CR>", { noremap = true })
+vim.api.nvim_set_keymap("n", "h", ":NvimTreeToggle<CR>", { noremap = true })
+vim.api.nvim_set_keymap("n", "<C-n>", ":NvimTreeToggle<CR>", { noremap = true })
+vim.api.nvim_set_keymap("n", "<leader>r", ":NvimTreeRefresh<CR>", { noremap = true })
+vim.api.nvim_set_keymap("n", "<leader>n", ":NvimTreeCreateDir<CR>", { noremap = true })
+vim.api.nvim_set_keymap("n", "<leader>f", ":NvimTreeFindFile<CR>", { noremap = true })
+vim.api.nvim_set_keymap("n", "<leader>d", ":NvimTreeDelete<CR>", { noremap = true })
